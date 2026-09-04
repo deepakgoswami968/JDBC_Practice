@@ -31,29 +31,27 @@ public class StudentRepository {
          }
      }
 
-         /*   public void updateuser()
-     {
-             try
-             {
-                 Connection connectionobject  = DriverManager.getConnection(url, username, password);
-                 System.out.println("Database connected successfully");
+           public void updateuser() {
+               try {
+                   Connection connectionobject = DriverManager.getConnection(url, username, password);
+                   System.out.println("Database connected successfully");
 
-                 Statement statement = connectionobject.createStatement();
-                 String sql1 = "UPDATE students SET age =30 "+
-                         "WHERE id = 1";
-                 int result = statement.executeUpdate(sql1);
-                 if(result==1){
-                     System.out.println("updation successful");
+                   Statement statement = connectionobject.createStatement();
+                   String sql1 = "UPDATE students SET age =35 " +
+                           "WHERE id = 1";
+                   int result = statement.executeUpdate(sql1);
+                   if (result == 1) {
+                       System.out.println("updation successful");
 
-                 }else{
-                     System.out.println("update failed");
-                 }
-                 connectionobject.close();
-             }catch(SQLException e) {
-                 System.out.println("Database failed to connect");
-                 e.printStackTrace();
-             }
-             */
+                   } else {
+                       System.out.println("update failed");
+                   }
+                   connectionobject.close();
+               } catch (SQLException e) {
+                   System.out.println("Database failed to connect");
+                   e.printStackTrace();
+               }
+           }
 
 
 
