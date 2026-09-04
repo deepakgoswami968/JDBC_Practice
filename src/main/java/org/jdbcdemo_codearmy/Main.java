@@ -12,7 +12,8 @@ public class Main {
     String password = "Kiet@123";
         StudentRepository sr = new StudentRepository();
       // sr.createuser();
-        sr.updateuser();
+        //sr.updateuser();
+        sr.deleteuser();
 
         //executeupdate -- teeno k liye use hota hai (create matlb insert)delete update
         //execute --READ

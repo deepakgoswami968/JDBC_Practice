@@ -52,6 +52,27 @@ public class StudentRepository {
                    e.printStackTrace();
                }
            }
+    public void deleteuser() {
+        try {
+            Connection connectionobject = DriverManager.getConnection(url, username, password);
+            System.out.println("Database connected successfully");
+
+            Statement statement = connectionobject.createStatement();
+            String sql1 = "DELETE FROM students "+
+                    "WHERE id = 3";
+            int result = statement.executeUpdate(sql1);
+            if (result == 1) {
+                System.out.println("deletion successful");
+
+            } else {
+                System.out.println("deletion failed");
+            }
+            connectionobject.close();
+        } catch (SQLException e) {
+            System.out.println("Database failed to connect");
+            e.printStackTrace();
+        }
+    }
 
 
 
